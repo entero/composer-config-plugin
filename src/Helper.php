@@ -35,7 +35,7 @@ class Helper
             }
             foreach ($items as $k => $v) {
                 if (\is_int($k)) {
-                    if (isset($res[$k])) {
+                    if (isset($res[$k]) && !\is_string($v)) {
                         $res[] = $v;
                     } else {
                         $res[$k] = $v;
